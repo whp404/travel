@@ -69,9 +69,11 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      this.changeCity(city)
+      //this.changeCity(city)
+      this.$store.dispatch('changeCity',city);
       this.$router.push('/')
     },
+
     ...mapMutations(['changeCity'])
   },
   mounted () {
